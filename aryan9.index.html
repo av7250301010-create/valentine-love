@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Surprise 💖</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  overflow-x:hidden;
+}
+
+/* PAGE 1 */
+.center{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+h1{color:white;font-size:26px;margin-bottom:20px;}
+p{color:white;font-size:16px;margin-bottom:20px;}
+
+button{
+  padding:14px 32px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+#yes{background:white;color:#ff4d6d;}
+#no{background:#ff1e56;color:white;position:absolute;}
+
+.hidden{display:none;}
+
+/* PAGE 2 */
+#page2{background:white;}
+
+/* GIFTS */
+.gift{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.box{
+  width:260px;
+  height:260px;
+  background:linear-gradient(135deg,#ff4d6d,#ff8fa3);
+  border-radius:35px;
+  font-size:110px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation:pulse 1.5s infinite;
+}
+
+.tap{
+  margin-top:18px;
+  color:#ff4d6d;
+  font-size:16px;
+}
+
+.text{
+  margin-top:35px;
+  font-size:20px;
+  color:#ff4d6d;
+  text-align:center;
+  padding:0 25px;
+  display:none;
+  line-height:1.5;
+}
+
+.show{display:block;}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.12);}
+  100%{transform:scale(1);}
+}
+
+/* CONFETTI */
+.confetti{
+  position:fixed;
+  width:12px;
+  height:18px;
+  top:-20px;
+  animation:fall linear forwards;
+  z-index:9999;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="center">
+  <h1>Will you be my Valentine? 💘</h1>
+  <p>
+    💖 In a world that never stops moving,<br>
+    you are my favorite place to stand still 😍
+  </p>
+  <button id="yes" onclick="yesClicked()">YES 💕</button>
+  <button id="no" onclick="moveNo()">NO 😜</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="hidden">
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">You are my favorite notification 💌😂</div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">I smiled today… then I remembered you 😘</div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">You stole my heart ❤️ No refund policy 😜</div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">Every scroll = one more hug for you 🤗</div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">You make even bad days feel cute 💕</div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">If love was a game… I already lost to you 😍</div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">You’re the reason my phone battery dies 💖📱</div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">My favorite place is next to you 💞</div>
+  </div>
+
+  <!-- LOVE LETTER -->
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">💌</div>
+    <div class="tap">Tap the love letter 💕</div>
+    <div class="text">
+      💌 My Love Letter to You 💌<br><br>
+      🌸 You walked into my life like a soft smile<br>
+      💫 Turned ordinary days into magic<br><br>
+      ❤️ You are my calm and my chaos<br>
+      😘 My favorite thought at random times<br><br>
+      🤍 In a world that never stops moving,<br>
+      🫶 you are my favorite place to stand still<br><br>
+      ♾️ Not just today, not just Valentine’s Day,<br>
+      💖 but every day… it’s you
+    </div>
+  </div>
+
+  <div class="gift">
+    <div class="box" onclick="toggleText(this)">🎁</div>
+    <div class="tap">Tap the gift 🎀</div>
+    <div class="text">Last gift 🎁… but my love has no end ❤️</div>
+  </div>
+
+</div>
+
+<script>
+const noBtn=document.getElementById("no");
+let noClickCount=0;
+
+const noTexts=[
+  "Are you sure? 🤔",
+  "Think again 😏",
+  "Pleaseee 🥺",
+  "Don’t break my heart 💔",
+  "Last chance 😳"
+];
+
+function moveNo(){
+  let x=Math.random()*(window.innerWidth-120);
+  let y=Math.random()*(window.innerHeight-120);
+  noBtn.style.left=x+"px";
+  noBtn.style.top=y+"px";
+
+  if(noClickCount<5){
+    noBtn.innerText=noTexts[noClickCount];
+  }else{
+    noBtn.innerText="NO 😜";
+  }
+  noClickCount++;
+}
+
+function yesClicked(){
+  document.getElementById("page1").classList.add("hidden");
+  document.getElementById("page2").classList.remove("hidden");
+  launchConfetti();
+}
+
+function toggleText(box){
+  const text=box.parentElement.querySelector(".text");
+  text.classList.toggle("show");
+}
+
+/* CONFETTI */
+function launchConfetti(){
+  const colors=["#ff2d55","#ffcc00","#00e5ff","#7cff00","#ff6f00"];
+  for(let i=0;i<160;i++){
+    let c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=colors[Math.floor(Math.random()*colors.length)];
+    c.style.animationDuration=3+Math.random()*2+"s";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5000);
+  }
+}
+</script>
+
+</body>
+</html>
